@@ -1,6 +1,5 @@
 package aplicacao;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 import modelo.Fruta;
@@ -11,7 +10,6 @@ public class Programa {
 
 		Scanner sc = new Scanner(System.in);
 		int opcao = 0;
-		Locale.setDefault(Locale.US);
 		Fruta fr = new Fruta();
 
 		while (opcao != 3) {
@@ -33,7 +31,8 @@ public class Programa {
 					fr.setQuantidade(sc.nextInt());
 					
 					System.out.print("INFORME QUAL O PREÇO: ");
-					fr.setPreco(sc.nextFloat());
+					float preco = sc.nextDouble();
+					//fr.setPreco(sc.nextFloat());
 					
 					System.out.println();
 					break;

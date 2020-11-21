@@ -1,0 +1,35 @@
+package aplicacao;
+
+import java.util.Scanner;
+
+public class Programa {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("1 - PARA CADASTRAR NOVO PRODUTO");
+		System.out.println("2 - REALIZAR COMPRA");
+		int opcao = sc.nextInt();
+
+		switch (opcao) {
+		case 1:
+			System.out.println("INFORME O NOME DA NOVA FRUTA: ");
+			System.out.println("INFORME A QUANTIDADE: ");
+			System.out.println("INFORME QUAL O PREÇO: ");
+
+			break;
+
+		case 2: {
+			System.out.println("INFORME O NOME DA FRUTA: ");
+			System.out.println("INFORME A QUANTIDADE QUE DESEJA: ");
+
+			break;
+
+		}
+
+		}
+
+	}
+
+}

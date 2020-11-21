@@ -54,15 +54,36 @@ public class Fruta{
 	}
 
 	public void setPreco(Float preco) {
-		if(preco < 0.0) {
-			System.out.println("Preço inválido, preço não pode ser menor que ZERO");
-		}
 		this.preco = preco;
 	}
 
 	@Override
 	public String toString() {
 		return "Fruta [id=" + id + ", nome=" + nome + ", quantidade=" + quantidade + ", preco=" + preco + "]";
-	}	
+	}
+	
+	
+	public static boolean validar(Fruta fr) {
+		boolean  f1 = true, f2 = true, f3 = true;
+		if(!fr.nome.matches("(?=.*[}{,.^?~=+\\-_\\/*\\-+.\\|])(?=.*[a-zA-Z])(?=.*[0-9]).{8,}")) {
+			System.out.println("Nome inválido, não pode possuir caracteres especiais");
+			f1 = false;
+		}
+		if(fr.quantidade < 0) {
+			System.out.println("Quantidade inválida, quantidade não pode ser menor que ZERO");
+			f2 = false;
+		}	
+		if(fr.preco < 0.0) {
+			System.out.println("Preço inválido, preço não pode ser menor que ZERO");
+			f3 = false;
+		}
+		if(!f1 && !f2 && !f3) return false;
+		return true;
+			
+	}
+	
+	
+	
+	
 
 }
