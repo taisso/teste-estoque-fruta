@@ -1,8 +1,5 @@
 package modelo;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class Fruta{
 	
 	private Integer id;
@@ -35,9 +32,7 @@ public class Fruta{
 	}
 
 	public void setNome(String nome) {
-		Pattern pattern = Pattern.compile("[!#@$%¨&*0-9].*");
-		Matcher matcher = pattern.matcher(nome);
-		if(matcher.find()) {
+		if(nome.matches("/[^a-zA-Z0-9]+/g")) {
 			throw new IllegalArgumentException("Nome inválido, não pode possuir caracteres especiais");
 		}
 		this.nome = nome;
@@ -49,7 +44,7 @@ public class Fruta{
 
 	public void setQuantidade(Integer quantidade) {
 		if(quantidade < 0) {
-			throw new IllegalArgumentException("Quantidade inválida, quantidade não pode ser menor que ZERO");
+			System.out.println("Quantidade inválida, quantidade não pode ser menor que ZERO");
 		}	
 		this.quantidade = quantidade;
 	}
@@ -60,7 +55,7 @@ public class Fruta{
 
 	public void setPreco(Float preco) {
 		if(preco < 0.0) {
-			throw new IllegalArgumentException("Preço inválido, preço não pode ser menor que ZERO");
+			System.out.println("Preço inválido, preço não pode ser menor que ZERO");
 		}
 		this.preco = preco;
 	}

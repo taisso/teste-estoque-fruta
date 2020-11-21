@@ -61,7 +61,7 @@ public class Programa {
 			}
 			
 			}catch(IllegalArgumentException e) {
-				System.out.println("\nErro no argmento: " + e.getMessage());
+				System.out.println("Erro no argmento");
 			}
 
 		}

@@ -3,18 +3,18 @@ package modelo;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Fruta{
-	
+public class Fruta {
+
 	private Integer id;
-	
+
 	private String nome;
 	private Integer quantidade;
 	private Float preco;
-	
+
 	public Fruta() {
-		
+
 	}
-	
+
 	public Fruta(Integer id, String nome, Integer quantidade, Float preco) {
 		this.id = id;
 		this.nome = nome;
@@ -35,9 +35,7 @@ public class Fruta{
 	}
 
 	public void setNome(String nome) {
-		Pattern pattern = Pattern.compile("[!#@$%¨&*0-9].*");
-		Matcher matcher = pattern.matcher(nome);
-		if(matcher.find()) {
+		if (!nome.matches("(?=.*[}{,.^?~=+\\-_\\/*\\-+.\\|])(?=.*[a-zA-Z])(?=.*[0-9]).{8,}")) {
 			throw new IllegalArgumentException("Nome inválido, não pode possuir caracteres especiais");
 		}
 		this.nome = nome;
@@ -48,9 +46,9 @@ public class Fruta{
 	}
 
 	public void setQuantidade(Integer quantidade) {
-		if(quantidade < 0) {
-			throw new IllegalArgumentException("Quantidade inválida, quantidade não pode ser menor que ZERO");
-		}	
+		if (quantidade < 0) {
+			System.out.println("Quantidade inválida, quantidade não pode ser menor que ZERO");
+		}
 		this.quantidade = quantidade;
 	}
 
@@ -59,8 +57,8 @@ public class Fruta{
 	}
 
 	public void setPreco(Float preco) {
-		if(preco < 0.0) {
-			throw new IllegalArgumentException("Preço inválido, preço não pode ser menor que ZERO");
+		if (preco < 0.0) {
+			System.out.println("Preço inválido, preço não pode ser menor que ZERO");
 		}
 		this.preco = preco;
 	}
@@ -68,6 +66,15 @@ public class Fruta{
 	@Override
 	public String toString() {
 		return "Fruta [id=" + id + ", nome=" + nome + ", quantidade=" + quantidade + ", preco=" + preco + "]";
-	}	
+	}
+
+	public String retiraEspacosDuplicados(String string) {
+		String patternStr = "\\s+";
+		String replaceStr = " ";
+		Pattern pattern = Pattern.compile(patternStr);
+		Matcher matcher = pattern.matcher(string);
+		string = matcher.replaceAll(replaceStr);
+		return string;
+	}
 
 }

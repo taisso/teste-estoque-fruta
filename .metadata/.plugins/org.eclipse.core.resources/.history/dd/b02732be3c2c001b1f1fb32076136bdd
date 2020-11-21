@@ -60,7 +60,7 @@ public class Fruta{
 
 	public void setPreco(Float preco) {
 		if(preco < 0.0) {
-			throw new IllegalArgumentException("Preço inválido, preço não pode ser menor que ZERO");
+			System.out.println("Preço inválido, preço não pode ser menor que ZERO");
 		}
 		this.preco = preco;
 	}

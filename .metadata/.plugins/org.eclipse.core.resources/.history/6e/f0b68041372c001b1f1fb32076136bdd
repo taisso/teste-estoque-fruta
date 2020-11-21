@@ -15,8 +15,6 @@ public class Programa {
 		Fruta fr = new Fruta();
 
 		while (opcao != 3) {
-			
-			try {
 
 			System.out.println("1 - PARA CADASTRAR NOVO PRODUTO");
 			System.out.println("2 - REALIZAR COMPRA");
@@ -58,10 +56,6 @@ public class Programa {
 					System.out.println("NENHUMA DA OPÇÕES");
 				}
 
-			}
-			
-			}catch(IllegalArgumentException e) {
-				System.out.println("\nErro no argmento: " + e.getMessage());
 			}
 
 		}
