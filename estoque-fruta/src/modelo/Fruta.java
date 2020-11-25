@@ -4,9 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Fruta{
-	
-	private Integer id;
-	
+		
 	private String nome;
 	private Integer quantidade;
 	private Float preco;
@@ -15,19 +13,10 @@ public class Fruta{
 		
 	}
 	
-	public Fruta(Integer id, String nome, Integer quantidade, Float preco) {
-		this.id = id;
+	public Fruta(String nome, Integer quantidade, Float preco) {
 		this.nome = nome;
 		this.quantidade = quantidade;
 		this.preco = preco;
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
 	}
 
 	public String getNome() {
@@ -67,7 +56,7 @@ public class Fruta{
 
 	@Override
 	public String toString() {
-		return "Fruta [id=" + id + ", nome=" + nome + ", quantidade=" + quantidade + ", preco=" + preco + "]";
+		return "Fruta [nome=" + nome + ", quantidade=" + quantidade + ", preco=" + preco + "]";
 	}	
 
 }
