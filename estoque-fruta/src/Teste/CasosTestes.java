@@ -1,24 +1,22 @@
 package Teste;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import modelo.Fruta;
 
 class CasosTestes {
 	
-	Fruta fr;
-
-	@BeforeEach
-	void setUp() throws Exception {
-		fr = new Fruta();
-	}
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void ehStringtest() {
+		assertEquals(true, Fruta.ehString("Ola")); //VERIFICA SE POSSUI ALGUM CARACTERE ESPECIAL
+	}
+	
+	@Test
+	void validaNum() {
+		assertEquals(true, Fruta.validaNumero(-1.0F)); // VERIFICA SE ALGUM NÚMERO É ABAIXO DE ZERO
 	}
 
 }
