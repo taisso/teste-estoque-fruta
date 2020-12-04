@@ -36,14 +36,13 @@ public class Programa {
 			conn = DB.getConnection();
 			Querys.conn = conn;
 
-			while (opcao != 4) {
+			while (opcao != 3) {
 
 				try {
 
 					System.out.println("1 - REGISTRAR NOVO PRODUTO NO ESTOQUE");
 					System.out.println("2 - REALIZAR COMPRA");
-					System.out.println("3 - CONSULTAR O PRODUTO");
-					System.out.println("4 - SAIR\n");
+					System.out.println("3 - SAIR\n");
 					System.out.print("INFORME A OPÇÃO: ");
 					opcao = sc.nextInt();
 
@@ -137,29 +136,6 @@ public class Programa {
 
 					}
 					case 3: {
-
-						st1 = conn.createStatement();
-						boolean isEmpty = true;
-
-						System.out.print("INFORME O NOME: ");
-						String nome = "'" + sc.nextLine() + "'";
-
-						rs = st1.executeQuery("SELECT * FROM frutas where nome ilike " + nome);
-						System.out.print("\nRESULTADO ENCONTRADO: ");
-						while (rs.next()) {
-							System.out.print("ID: " + rs.getInt("id") + ", ");
-							System.out.print("NOME: " + rs.getString("nome") + ", ");
-							System.out.print("QUANTIDADE: " + rs.getInt("quantidade") + ", ");
-							System.out.println("PREÇO: " + String.format("%.2f", rs.getFloat("preco")));
-							isEmpty = false;
-						}
-						if (isEmpty)
-							System.err.println("DADO INFORMADO NÃO ENCONTRADO");
-						System.out.println();
-						break;
-
-					}
-					case 4: {
 
 						opcao = 3;
 						System.out.println("VOCÊ SAIU");

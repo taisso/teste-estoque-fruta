@@ -1,4 +1,0 @@
-user=vzytnhkp
-password=1234567
-dburl=jdbc:postgresql://rajje.db.elephantsql.com/vzytnhkp
-useSSL=false

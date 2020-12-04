@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="2"/>
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-1.8"/>
-	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\Users\taiss\Downloads\projeto-java"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\Users\taiss\Downloads\lib"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>
@@ -13,7 +13,7 @@
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="ClasspathContainerSelectionPage">
-		<item key="index" value="6"/>
+		<item key="index" value="7"/>
 	</section>
 	<section name="quick_assist_proposal_size">
 	</section>
@@ -38,5 +38,8 @@
 		<item key="updateTextualMatches" value="false"/>
 		<item key="updateQualifiedNames" value="false"/>
 		<item key="patterns" value="*"/>
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item key="pageIndex" value="2"/>
 	</section>
 </section>
