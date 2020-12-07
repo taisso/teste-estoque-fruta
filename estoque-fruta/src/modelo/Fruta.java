@@ -47,10 +47,6 @@ public class Fruta {
 		}
 	}
 
-	public Integer getQuantidade() {
-		return quantidade;
-	}
-
 	public void setQuantidade(Integer quantidade) {
 		if (Fruta.validaNumero((float) quantidade)) {
 			this.quantidade = quantidade;
@@ -58,19 +54,24 @@ public class Fruta {
 			throw new IllegalArgumentException("Quantidade não pode ser menor que zero\n");
 		}
 	}
-
-	public Float getPreco() {
-		return preco;
-	}
-
+	
 	public void setPreco(Float preco) {
 		if (Fruta.validaNumero(preco)) {
 			this.preco = preco;
 		} else {
 			throw new IllegalArgumentException("Preço não pode ser menor que zero\n");
 		}
-
+		
 	}
+
+	public Integer getQuantidade() {
+		return quantidade;
+	}
+
+	public Float getPreco() {
+		return preco;
+	}
+
 
 	@Override
 	public String toString() {
